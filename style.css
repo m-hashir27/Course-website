@@ -517,7 +517,7 @@ footer .copyright{
     margin-top: 40px;
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1250px){
     .btn{
         padding: 12px 32px;
     }
@@ -551,6 +551,7 @@ footer .copyright{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        /* margin-top: 50px; */
     }
 
     .hero-section .left .btn{
@@ -560,7 +561,7 @@ footer .copyright{
     .hero-section .right{
         position: absolute;
         /* bottom: 266px; */
-        bottom: -15px;
+        bottom: 0px;
     }
 
     .hero-section .right img{
@@ -573,8 +574,92 @@ footer .copyright{
     }
 
     .achievement-card.students-enrolled, .achievement-card.overall-rating{
-        left: -200px;
-        /* left: unset; */
-        top: 50px;
+        left: unset;
+        top: unset;
+        /* left: 100px; */
+        /* top: 50px; */
+    }
+
+    .hero-section .achievement-cards{
+        align-self: flex-start;
+        margin: 40px;
+    }
+
+    h2{
+        font-size: 40px;
+    }
+
+    .testimonials-section{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 50px;
+    }
+
+    .testimonials-section .testimonial-card{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .testimonials-section .testimonial-card:last-child::before{
+        top: -40px;
+        height: calc(100% + 80px);
+        transform: translateX(20px); /*same as left: 60px*/
+        /* left: 60px; */
+    }
+
+    .testimonials-section .testimonial-card:last-child{
+        transform: translateX(0);
+        margin-bottom: 0;
+    }
+
+    .testimonials-section .desktop-btn{
+        display: none;
+    }
+
+    .testimonials-section .mobile-btn{
+        display: block;
+        align-self: flex-end;
+        order: 3;
+    }
+
+    .testimonials-section .left{
+        order: 2;
+    }
+
+    .testimonials-section .right p{
+        display: inline;
+    }
+
+    .testimonials-section h2{
+        margin-bottom: 20px;
+    }
+
+    .courses-section .course-cards{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .courses-section .course-card img{
+        max-height: 300px; 
+        min-height: 240px;
+        width: 100%;
+        border-radius: 24px;
+        object-fit: cover;
+    }
+
+    .courses-section .course-card h3{
+        font-size: 24px;
+    }
+
+    .courses-section .wrapper .btn{
+        right: 100px;
+    }
+
+    footer .links-container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer .links-container .links:last-child{
+        grid-column: 1 / 3;
     }
 }
